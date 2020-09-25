@@ -1,6 +1,6 @@
 ﻿namespace BoxField
 {
-    partial class GameScreen
+    partial class GameOver
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,40 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.gameLoop = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // gameLoop
-            // 
-            this.gameLoop.Enabled = true;
-            this.gameLoop.Interval = 20;
-            this.gameLoop.Tick += new System.EventHandler(this.gameLoop_Tick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 53);
+            this.label1.Font = new System.Drawing.Font("MV Boli", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(703, 221);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 72);
+            this.label1.Size = new System.Drawing.Size(301, 58);
             this.label1.TabIndex = 0;
+            this.label1.Text = "GAME OVER";
             // 
-            // GameScreen
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(670, 598);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(442, 119);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "PLAY AGAIN";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // GameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "GameScreen";
+            this.Name = "GameOver";
             this.Size = new System.Drawing.Size(1800, 962);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameScreen_Paint);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameScreen_KeyUp);
-            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.GameScreen_PreviewKeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,7 +69,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Timer gameLoop;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
